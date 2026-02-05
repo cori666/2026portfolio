@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sohui portfolio</title>
+</head>
+   <script src="js/jquery-3.1.1.min.js"></script>
+<link href="css/web_style.css" rel="stylesheet" type="text/css"> <!--html스타일-->
+<link href="css/common.css" rel="stylesheet" type="text/css"> <!--공통속성-->
+  <script src="js/script.js"></script> 
+
+<body>
+  <div class="page">
+    <header id="mainHeader">
+      <div class="nav">
+                 <div class="logo" > <img src="img/icon.png" alt="logo">
+          </div>
+              <nav class="menu" aria-label="primary">
+          <a href="home.html" >HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="web.html"class="active" >WEB</a>
+          <a href="graphic.html">GRAPHIC</a>
+        </nav>
+        <div class="year" aria-label="year">
+         <img src="img/year.png" alt="number year">
+        </div></div>
+    </header>
+
+
+     <main class="container">
+      <div class="project_title">
+        <h2> PROJECT<span>WEB</span></h2>
+      </div>
+
+      <ul class="tab_menu">
+        <li><a class="on" data-filter="all">ALL</a></li>
+        <li><a data-filter="redesign">REDESIGN</a></li>
+        <li><a data-filter="works">WORKS</a></li>
+      </ul>
+
+      <div class="project_list">
+        
+        <article class="project_item redesign">
+          <div class="thumb_box">
+            <img src="https://placehold.co/600x400/222/fff?text=REDESIGN+01" alt="web01"> 
+          </div>
+          <div class="info_box">
+            <div class="text_group">
+              <h3>OOOOO</h3>
+              <p>개인적인 포트폴리오 작업물로 기존 홈페이지 리디자인</p>
+            </div>
+            <a href="#" class="view_btn">VIEW</a>
+          </div>
+        </article>
+
+        <article class="project_item redesign">
+          <div class="thumb_box">
+            <img src="https://placehold.co/600x400/f1c40f/432a28?text=FLOCKT%26CO" alt="web02">
+          </div>
+          <div class="info_box">
+            <div class="text_group">
+              <h3>OOOOO</h3>
+              <p>개인적인 포트폴리오 작업물로 기존 홈페이지 리디자인</p>
+            </div>
+            <a href="#" class="view_btn">VIEW</a>
+          </div>
+        </article>
+
+        <article class="project_item works">
+          <div class="thumb_box">
+            <img src="img/rapportb_logo.png" alt="web03">
+          </div>
+          <div class="info_box">
+            <div class="text_group">
+              <h3>RAPPORTB</h3>
+              <p>CAFE24 기반코드의 하드코딩, 기획, 제작 및 운영</p>
+            </div>
+             <a href="https://rapportb.com/" class="view_btn">VIEW</a>
+          </div>
+        </article>
+
+        <article class="project_item works">
+          <div class="thumb_box">
+            <img src="img/unude_logo.PNG" alt="web04">
+          </div>
+          <div class="info_box">
+            <div class="text_group">
+              <h3>UNUDER</h3>
+              <p>CAFE24 기반코드의 하드코딩, 로고디자인, 기획, 제작 및 운영</p>
+            </div>
+            <a href="https://unude.cafe24.com/" class="view_btn">VIEW</a>
+          </div>
+        </article>
+
+      </div>
+    </main>
+    
+
+   <!--  잔잔하게 좌우로 흐르는 2중 물결(엇갈림) -->
+    <div class="waveContainer" aria-hidden="true">
+      <div class="waveFade"></div>
+
+      <!-- 예시처럼 path 하나를 정의해두고 use로 2겹 사용 -->
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+
+        <g class="parallax">
+          <!-- 1번 물결 -->
+          <use href="#gentle-wave" x="48" y="0" class="wave1"></use>
+          <!-- 2번 물결: y를 살짝 내려서 겹침 + 반대방향 이동 -->
+          <use href="#gentle-wave" x="48" y="3" class="wave2"></use>
+        </g>
+      </svg>
+    </div> 
+  </body>
