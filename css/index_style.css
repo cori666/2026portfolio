@@ -1,0 +1,31 @@
+@charset "utf-8";
+*{ box-sizing:border-box; }
+html, body{ height:auto; }  
+body{overflow-x:hidden; overflow-y:auto; -webkit-overflow-scrolling: touch;}
+
+:root{--bg:#000; --white:#fff; --navText: rgba(255,255,255,0.7);}
+
+/* HOME */
+#wrap{ width: 100%; position: relative; overflow:hidden;}
+.contInner{ width:100%; position:relative; min-height:100vh;}
+.page{ min-height:100vh; position:relative; background: radial-gradient(circle at center, #111 0%, #000 70%);
+  overflow:hidden; }
+
+/* 중앙 타이틀 */
+main{ position:relative; z-index:10; display:grid; place-items:center;text-align:center; padding:0px 20px; transition:500ms ease;
+margin-top: 120px;}
+
+/* ✅ 모바일에서도 자동으로 줄어드는 반응형 타이포 */
+main .inner h1{font-family:'Bayon', sans-serif; font-weight:800; line-height:0.85em; letter-spacing:0.05em;
+  margin:0 0 20px; transition:700ms ease; z-index:999; font-size: clamp(150px, 15vw, 200px);}
+main .inner p{font-weight:400; font-size: clamp(14px, 3vw, 20px);  line-height:1.6em; letter-spacing:0.05em; color: rgba(255,255,255,0.7);
+  max-width: 600px; margin:0 auto; word-break: keep-all; transition:700ms ease;}
+
+/* 하단 파도 컨테이너 */
+.waveContainer{ position:absolute; left:0; right:0; bottom:0; height:120px; z-index:20; pointer-events:none;}
+
+/*-----------------------------HOME responsive-----------------------------*/
+@media (max-width: 600px){
+main{margin-top: 150px;  }
+main .inner h1{font-size: clamp(65px, 15vw, 180px); line-height: 0.9em; }
+main .inner p{ font-size: clamp(10px, 3vw, 16px);} }
