@@ -16,24 +16,44 @@
 
 <body>
   <div class="page">
-    <header>
-      <div class="nav">
-                 <div class="logo" > <img src="img/icon.png" alt="logo"></div>
-          <nav class="menu" aria-label="primary">
-          <a href="index.html" class="active">HOME</a>
-          <a href="about.html">ABOUT</a>
-          <a href="web.html" >WEB</a>
-          <a href="graphic.html">GRAPHIC</a>
-        </nav>
+<header id="mainHeader">
+  <div class="nav">
+    <div class="logo">
+      <img src="img/icon.png" alt="logo">
+    </div>
 
-        <div class="year" aria-label="year">
-         <img src="img/year.png" alt="number year">
-        </div></div>
-    </header>
+    <nav class="menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="web.html">Web</a>
+      <a href="graphic.html">Graphic</a>
+    </nav>
+
+    <div class="year">
+      <img src="img/year.png" alt="year" class="year-img">
+      
+      <button class="mobile-btn" aria-label="Open Menu">
+        <div class="hamburger-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-overlay">
+    <nav class="mobile-nav-list">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="web.html">WEB</a>
+      <a href="graphic.html">GRAPHIC</a>  
+    </div>
+</header>
 
     <main>
       <div class="inner">
-        <h1 class=mainname>WEB<br>DESIGNER</h1>
+        <h1 class=mainname>WEB<br>DESIGNER<br></h1>
         <p class="subtitle">
           변화하는 흐름 속에서도<br>
           일관된 경험을 만드는 웹디자이너 김소희입니다.
@@ -42,23 +62,18 @@
     </main>
 
 
-  <!--  잔잔하게 좌우로 흐르는 2중 물결(엇갈림) -->
-    <div class="waveContainer" aria-hidden="true">
-      <div class="waveFade"></div>
+     <div class="waveContainer">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+      <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.2)" />
+      <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.3)" />
+      <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.1)" />
 
-      <!-- 예시처럼 path 하나를 정의해두고 use로 2겹 사용 -->
-      <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-
-        <g class="parallax">
-          <!-- 1번 물결 -->
-          <use href="#gentle-wave" x="48" y="0" class="wave1"></use>
-          <!-- 2번 물결: y를 살짝 내려서 겹침 + 반대방향 이동 -->
-          <use href="#gentle-wave" x="48" y="3" class="wave2"></use>
-        </g>
+      </g>
       </svg>
-    </div>
-  </div>
+      </div>
 </body>

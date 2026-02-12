@@ -76,27 +76,6 @@ $(document).ready(function() {
       });
     });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const mobileBtn = document.querySelector(".mobile-btn");
-  const mobileOverlay = document.querySelector(".mobile-overlay");
-  const mobileLinks = document.querySelectorAll(".mobile-nav-list a");
-  const body = document.body;
 
-  if (mobileBtn && mobileOverlay) {
-    mobileBtn.addEventListener("click", () => {
-      // toggle 기능을 사용하여 active 클래스 추가/제거
-      mobileBtn.classList.toggle("active");
-      mobileOverlay.classList.toggle("active");
-      body.classList.toggle("menu-open");
-    });
-
-    // 메뉴 링크 클릭 시 닫기
-    mobileLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        mobileBtn.classList.remove("active");
-        mobileOverlay.classList.remove("active");
-        body.classList.remove("menu-open");
-      });
-    });
-  }
-});
+ 
+    
