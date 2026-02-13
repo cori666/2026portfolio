@@ -44,121 +44,26 @@ header.is-scrolled{ background: rgba(0, 0, 0, 0.509);  border-bottom-color: rgba
 
 
 /* --- mobile nav btn --- */
-/* --- 모바일 메뉴 관련 CSS (수정됨) --- */
-
-/* 1. 헤더 설정 (가장 중요) */
-header {
-  /* 기존 속성 유지 */
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  /* 메뉴가 열렸을 때 오버레이보다 위에 있어야 하므로 높은 z-index 부여 */
-  z-index: 2000; 
-  transition: background-color 0.3s ease;
-}
-
-/* 메뉴가 열렸을 때 헤더 배경 투명하게 (오버레이 검은 배경과 합체) */
-body.menu-open header {
-  background-color: transparent !important; 
-  backdrop-filter: none !important;
-  border-bottom: none !important;
-}
-
-/* 2. 모바일 버튼 스타일 (참조 이미지 스타일) */
-.mobile-btn {
-  display: none;
-  /* 위치나 크기는 기존 유지, 필요시 조정 */
-  width: 28px; 
-  height: 30px;
-  background: transparent; /* 배경 투명 */
-  border: none;
-  cursor: pointer;
-  z-index: 2001; /* 헤더 요소 중에서도 최상위 */
-  padding: 0;
-  justify-content: center;
-  align-items: center;
-}
-
-.hamburger-lines {
-  position: relative;
-  width: 24px; /* 버튼 크기 좀 더 키움 */
-  height: 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.hamburger-lines span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #fff; /* 흰색 선 */
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-}
-
-/* 3. 모바일 오버레이 (배경) */
-.mobile-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #000;
-  z-index: 1999; 
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 80px;
-  padding-left: 20px; }
-
-/* 4. 메뉴 리스트 (li 역할) */
-.mobile-nav-list {
-  margin:0;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  align-items: flex-start; /* 왼쪽 정렬 (이미지 참조) */
-}
-.mobile-nav-list a {
-  display: block;
-  font-size: 24px; /* 폰트 크게 (이미지 참조) */
-  font-weight: 400;
-  color:rgba(255,255,255,.90);
-  text-decoration: none;
-  text-transform: lowercase;
-  padding: 10px 0;
-  
-  /* 등장 애니메이션 초기값 */
-  opacity: 0;
-  transform: translateY(20px);
+header {position: fixed; top: 0; left: 0; right: 0; z-index: 2000; transition: background-color 0.3s ease;}
+body.menu-open header { background-color: transparent; backdrop-filter: none; border-bottom: none;}
+.mobile-btn { display: none; width: 28px; height: 30px;background: transparent; border: none;cursor: pointer;z-index: 2001;
+  padding: 0; justify-content: center; align-items: center;}
+.hamburger-lines { position: relative; width: 24px; height: 15px; display: flex; flex-direction: column; justify-content: space-between;}
+.hamburger-lines span {display: block; width: 100%; height: 2px; background-color: #fff; 
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; border-radius:10px;}
+.mobile-overlay {position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #000;
+  z-index: 1999; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s ease, visibility 0.4s ease;
+  display: flex; flex-direction: column; justify-content: flex-start; padding-top: 80px; padding-left: 20px;}
+.mobile-nav-list {margin:0; display: flex; flex-direction: column; gap: 10px; align-items: flex-start;}
+.mobile-nav-list a {display: block; font-size: 24px; font-weight: 400; color:rgba(137, 137, 137, 0.9);
+  text-decoration: none; text-transform: lowercase; padding: 5px 0; opacity: 0; transform: translateY(20px);
   transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);}
-
-
-/* --- Active 상태 (JS 클래스 토글 시) --- */
-
-/* 오버레이 보이기 */
-.mobile-overlay.active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-/* 링크들 순차적 등장 */
-.mobile-overlay.active .mobile-nav-list a {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* 닫기 버튼 (X자 만들기) */
-.mobile-btn.active .hamburger-lines span:nth-child(1) {transform: translateY(6px) rotate(49deg);}
+.mobile-nav-list a:hover{color:rgb(255, 255, 255)}
+.mobile-overlay.active {opacity: 1; visibility: visible; pointer-events: auto;}
+.mobile-overlay.active .mobile-nav-list a {opacity: 1; transform: translateY(0);}
+.mobile-btn.active .hamburger-lines span:nth-child(1) {transform: translateY(6px) rotate(47deg);}
 .mobile-btn.active .hamburger-lines span:nth-child(2) { display: none;}
-.mobile-btn.active .hamburger-lines span:nth-child(3) {transform: translateY(-10px) rotate(-47deg);}
-
+.mobile-btn.active .hamburger-lines span:nth-child(3) {transform: translateY(-8px) rotate(-50deg);}
 
 
 /* wave css */
@@ -181,8 +86,7 @@ body.menu-open header {
   100% {transform: translate3d(-90px, 0, 0);}}
 
 
-
- /*----------------------------- nav responsive /----------------------------- */
+/*----------------------------- nav responsive /----------------------------- */
  
 /* 모바일 대응 */
 @media (max-width: 768px) {

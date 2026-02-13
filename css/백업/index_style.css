@@ -8,24 +8,23 @@ body{overflow-x:hidden; overflow-y:auto; -webkit-overflow-scrolling: touch;}
 /* HOME */
 #wrap{ width: 100%; position: relative; overflow:hidden;}
 .contInner{ width:100%; position:relative; min-height:100vh;}
-.page{ min-height:100vh; position:relative; background: radial-gradient(circle at center, #111 0%, #000 70%);
-  overflow:hidden; }
+.page{ min-height:100vh; position:relative; background: radial-gradient(circle at center, #111 0%, #000 70%); overflow:hidden;  }
 
 /* 중앙 타이틀 */
 main{ position:relative; z-index:10; display:grid; place-items:center;text-align:center; padding:0px 20px; transition:500ms ease;
 margin-top: 120px;}
-
 /* ✅ 모바일에서도 자동으로 줄어드는 반응형 타이포 */
 main .inner h1{font-family:'Bayon', sans-serif; font-weight:800; line-height:0.85em; letter-spacing:0.05em;
-  margin:0 0 20px; transition:700ms ease; z-index:999; font-size: clamp(150px, 15vw, 200px);}
-main .inner p{font-weight:400; font-size: clamp(14px, 3vw, 20px);  line-height:1.6em; letter-spacing:0.05em; color: rgba(255,255,255,0.7);
+ transition:700ms ease; z-index:999; font-size: clamp(120px, 15vw, 200px);margin-bottom: 0;}
+main .inner p{font-weight:400; font-size: clamp(14px, 3vw, 24px);  line-height:1.5em; letter-spacing:0.05em; color: rgba(255,255,255,0.7);
   max-width: 600px; margin:0 auto; word-break: keep-all; transition:700ms ease;}
+  main .inner .mainhieen{display: none;}
 
-/* 하단 파도 컨테이너 */
-.waveContainer{ position:absolute; left:0; right:0; bottom:0; height:120px; z-index:20; pointer-events:none;}
 
-/*-----------------------------HOME responsive-----------------------------*/
+/*-----------------------------HOME responsive-- ------------}---------------*/
 @media (max-width: 600px){
-main{margin-top: 150px;  }
-main .inner h1{font-size: clamp(65px, 15vw, 180px); line-height: 0.9em; }
-main .inner p{ font-size: clamp(10px, 3vw, 16px);} }
+main .inner h1{margin-bottom:20px;}}
+@media (max-width: 550px){
+  main{margin-top: 160px;}
+  main .inner h1{font-size: clamp(100px, 10vw, 120px) ;} }
+@media (max-width: 400px){main .inner h1{font-size: clamp(75px, 10vw, 100px) ;} }

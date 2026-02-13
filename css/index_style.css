@@ -14,17 +14,21 @@ body{overflow-x:hidden; overflow-y:auto; -webkit-overflow-scrolling: touch;}
 main{ position:relative; z-index:10; display:grid; place-items:center;text-align:center; padding:0px 20px; transition:500ms ease;
 margin-top: 120px;}
 /* ✅ 모바일에서도 자동으로 줄어드는 반응형 타이포 */
-main .inner h1{font-family:'Bayon', sans-serif; font-weight:800; line-height:0.85em; letter-spacing:0.05em;
- transition:700ms ease; z-index:999; font-size: clamp(120px, 15vw, 200px);margin-bottom: 0;}
-main .inner p{font-weight:400; font-size: clamp(14px, 3vw, 24px);  line-height:1.5em; letter-spacing:0.05em; color: rgba(255,255,255,0.7);
+main .inner h1{font-family:'Bayon', sans-serif; font-weight:200; line-height:0.85em; transition:700ms ease;
+  z-index:999; font-size: clamp(150px, 15vw, 200px);margin-bottom: 10px;}
+main .inner p{font-weight:400; font-size: clamp(14px, 5vw, 20px);  line-height:1.3em; letter-spacing:0.05em; color: rgba(255,255,255,0.7);
   max-width: 600px; margin:0 auto; word-break: keep-all; transition:700ms ease;}
   main .inner .mainhieen{display: none;}
 
 
 /*-----------------------------HOME responsive-- ------------}---------------*/
 @media (max-width: 600px){
-main .inner h1{margin-bottom:20px;}}
+main .inner h1{margin-bottom:10px;}}
 @media (max-width: 550px){
+main .inner h1{font-size: clamp(140px, 10vw, 180px); margin-bottom:10px;;}
+main .inner p{font-size: clamp(12px, 5vw, 14px); } }
+@media (max-width: 500px){
+  main .inner h1{font-size: clamp(100px, 5vw, 170px);margin-bottom:10px;}}
+  @media (max-width: 380px){
   main{margin-top: 160px;}
-  main .inner h1{font-size: clamp(100px, 10vw, 120px) ;} }
-@media (max-width: 400px){main .inner h1{font-size: clamp(75px, 10vw, 100px) ;} }
+  main .inner h1{font-size: clamp(90px, 5vw, 100px);margin-bottom:5px;} }
