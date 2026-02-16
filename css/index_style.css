@@ -6,6 +6,9 @@ body{overflow-x:hidden; overflow-y:auto; -webkit-overflow-scrolling: touch;}
 :root{--bg:#000; --white:#fff; --navText: rgba(255,255,255,0.7);}
 
 /* HOME */
+body.menu-open{overflow: hidden;height: 100dvh;}
+body.no-y-scroll{ overflow: hidden; overscroll-behavior: none; height: 100dvh;}
+@supports not (height: 100dvh){body.no-y-scroll{ height: 100vh;}}
 #wrap{ width: 100%; position: relative; overflow:hidden;}
 .contInner{ width:100%; position:relative; min-height:100vh;}
 .page{ min-height:100vh; position:relative; background: radial-gradient(circle at center, #111 0%, #000 70%); overflow:hidden;  }
