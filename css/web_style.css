@@ -3,200 +3,72 @@
 /*font-family:'Pretendard', sans-serif;*/
 /*font-family:'Bayon', sans-serif;*/
 
- #wrap{width: 100%; position: relative;overflow:hidden;
-}
+/*HOME*/
+ #wrap{width: 100%; position: relative;overflow:hidden}
 .contInner{height:100%;width:100%;position:absolute} /*내용이 채워져서 높이가 잡히면 생략가능*/
 #content > section{margin:0 auto;overflow: hidden;}
 .inner{margin: 0 auto}
-/* style.css */
+/* style.css */ 
 
- 
 /* 변수 */
-:root{
-  --bg: #000;
-  --white: #fff;
-  --navText: rgba(255,255,255, 0.8);
-  --line: #fff;  /* 중앙선 색상 */
-  --fg: #fff;    /* 점(dot) 색상 */}
-
-/* reset / base */
+:root{--bg: #000; --white: #fff; --navText: rgba(255,255,255, 0.8); --line: #fff;  /* 중앙선 색상 */ --fg: #fff;    /* 점(dot) 색상 */}
 *{ box-sizing:border-box; }
 html, body{ height:100%; }
-
 /* page wrapper */
-.page{
-  min-height:100vh;
-  position:relative;
-  background: var(--bg);
-}
 
+.page{ min-height:100vh; position:relative; background: var(--bg);}
+/* 스크롤 후: 배경/라인/블러 적용 */
+header.is-scrolled{ background: rgba(241, 241, 241, 0.079); border-bottom-color: rgba(255, 255, 255, 0.118);
+  border-bottom-width: 1.5px; backdrop-filter: blur(3px); box-shadow: 0 10px 30px rgba(255, 255, 255, 0);}
+.container {max-width: 1000px; margin: 0 auto; padding: 100px 20px 100px; text-align: center; width: 100%; position: relative;}
+/* 타이틀 섹션 */
+.project_title { margin-bottom: 80px; }
+.project_title h2, .project_title h2 span  {transition: 500ms ease; font-size: clamp(160px, 15vw, 180px); font-weight: 200; color: #444;
+  text-transform: uppercase; font-family:"Bayon", sans-serif;
+line-height: 0.85em; letter-spacing: 0.05em;}
+.project_title h2 span {display: block; color: #fff;}
+.tab_menu {display: flex; justify-content: flex-start; gap: 25px; margin-bottom: 50px; padding-bottom: 15px;position: relative; z-index: 10;}
+.tab_menu li a {font-size: 20px; font-weight: 400; color: #bbb; cursor: pointer; position: relative; transition: color 0.3s ease; letter-spacing: .1em; font-family: 'Pretendard', sans-serif;}
+.tab_menu li :hover{color: #fff; transition: 1000ms ease;}
+.tab_menu li a.on {color: #fff;}
+.tab_menu li a.on::after {content: ''; position: absolute; bottom: -5px; left: 46%; width: 80%; height: 1.5px; transform: translateX(-50%);
+  background: #ffffff; align-items: center;border-radius: 10px;}
 
-/* 메인 컨텐츠 영역 */
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 100px 20px 100px;
-      text-align: center;
-      width: 100%;
-      position: relative;
-    }
-
-    /* 타이틀 섹션 */
-    .project_title { margin-bottom: 80px; }
-    .project_title h2,
-     .project_title h2 span  {
-      font-size: 180px;
-      font-weight: 800;
-      color: #444; 
-      text-transform: uppercase;
-      font-family:"Bayon", sans-serif;
-      line-height: 0.85em;
-      letter-spacing: 0.05em;
-    }
-    .project_title h2 span {
-      display: block;
-      color: #fff;}
-
- .tab_menu {
-  display: flex;
-  justify-content: flex-start;
-  gap: 25px;
-  margin-bottom: 50px;
-  padding-bottom: 15px;
-  position: relative; /* z-index가 필요한 경우를 대비 */
-  z-index: 10;        /* 배경 요소에 가려지지 않도록 설정 */
-}
-
-.tab_menu li a {
-  font-size: 20px;
-  font-weight: 400;
-  color: #bbb; /* #666 대신 더 밝은 회색으로 변경하여 가시성 확보 */
-  cursor: pointer;
-  position: relative;
-  transition: color 0.3s ease; /* transition 대상 명확화 */
-  letter-spacing: .1em;
-  font-family: 'Pretendard', sans-serif;
-}
-
-  .tab_menu li :hover{
-         color: #fff;
-        transition: 1000ms ease;
-        }
-
-   .tab_menu li a.on {
-      color: #fff;
-    }
-    .tab_menu li a.on::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 46%;
-      width: 100%;
-      height: 1.5px;
-      transform: translateX(-50%);
-      background: #ffffff;
-      align-items: center;
-    }
-
-    /* 프로젝트 그리드 */
-    .project_list {
-      display: grid;
-      grid-template-columns: 1fr 1fr; /* 2열 배치 */
-      column-gap: 40px;
-      row-gap: 60px;
-      text-align: left;
-      margin-bottom: 100px;
-    }
-
-    .project_item {
-      width: 100%;
-    }
-
-    .thumb_box {
-      width: 100%;
-      aspect-ratio: 16 / 11;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 20px;
-      background: #1a1a1a; /* 이미지가 로드되기 전 배경색 */
-    }
-    .thumb_box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.5s;
-      display: block;
-    }
-    .project_item:hover .thumb_box img {
-      transform: scale(1.05);
-    }
-
-    .info_box {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-    .text_group h3 {
-      font-size: 22px;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-    .text_group p {
-      font-size: 16px;
-      color: #bcbcbc;
-      max-width: 100%;
-    }
-    .view_btn {
-      border: 1.5Px solid #aeaeae;
-      padding: 6px 22px;
-      border-radius: 30px;
-      font-size: 13px;
-      color: #fff;
-      transition: 0.3s;
-    }
-    .view_btn:hover {
-      background: #fff;
-      color: #000;
-      font-weight: 500;
-    }
-
-    @keyframes move-forever {
-      0% { transform: translate3d(-90px,0,0); }
-      100% { transform: translate3d(85px,0,0); }
-    }
- /* 하단 파도 컨테이너 */
-    .waveContainer{
-      position:absolute;
-      left:0; right:0; bottom:0;
-      height:100px;
-      z-index:20;
-      pointer-events:none;
-    }
-  /*   position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 150px; /* 높이 설정 */
-        /*  z-index: 1; /* 컨텐츠 뒤로 */
-        /*  pointer-events: none; /* 클릭 방해 금지 */
-         /* overflow: hidden;   
-          */
-
-    /*-----------------------------web responsive----------------------------- */
-@media screen and (max-width: 768px){
+ /* 프로젝트 그리드 */
+.project_list {display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; row-gap: 60px; text-align: left; margin-bottom: 100px;}
+.project_item {width: 100%;}
+.thumb_box {width: 100%; aspect-ratio: 16 / 11; border-radius: 12px; overflow: hidden; margin-bottom: 20px; background: #1a1a1a;}
+.thumb_box img {width: 100%; height: 100%; object-fit: cover; transition: 0.5s; display: block;}
+.project_item:hover .thumb_box img {transform: scale(1.05);}
+.info_box {display: flex; justify-content: space-between; align-items: flex-start;}
+.text_group h3 {font-size: 22px; letter-spacing: 1px; margin-bottom: 8px; color: #fff;}
+.text_group p {font-size: 16px; color: #bcbcbc; max-width: 100%;}
+.view_btn {border: 1.5Px solid #aeaeae; padding: 6px 22px; border-radius: 30px; font-size: 13px; color: #fff; transition: 0.3s;}
+.view_btn:hover {background: #fff; color: #000; font-weight: 500;}
+ @keyframes move-forever {
+  0% { transform: translate3d(-90px,0,0); }
+  100% { transform: translate3d(85px,0,0); }}
+     /*-----------------------------web responsive----------------------------- */
+@media screen and (max-width: 770px){
+  .project_title h2, .project_title h2 span{font-size:  clamp(100px, 5vw, 160px);}
   .container{padding: 50px 20px 100px;}
   .project_title{margin: 50px 20px 50px;;}
-  .project_title h2,
-  .project_title h2 span{font-size: 120px; }
-  .tab_menu li a {font-size: 14px; font-weight: 500;}
-  .tab_menu{margin-bottom: 30px; padding-bottom: 0;}
-  .tab_menu li a.on::after {height:1px}
-  .text_group h3{font-size: 18px; margin-bottom: 3px;}
+  .project_title h2,.project_title h2 span{font-size: 120px; }
+  .tab_menu li a {font-size: 16px; font-weight: 500;}
+  .tab_menu{margin-bottom: 30px; padding-bottom: 0; gap: 10px;}
+   .text_group h3{font-size: 18px; margin-bottom: 3px;}
   .text_group p{font-size: 14px; max-width: 90%}
   .view_btn{padding: 5px 10px;}
-  .project_list{margin: 0 auto;}
-  .waveContainer{height:60px;}
+  .project_list{margin: 0 auto; column-gap:20px; row-gap:30px}
+  .waveContainer{height:60px;}}
+  
+
+  @media (max-width: 500px){
+  .project_title{margin: 30px 15px;}
+  .project_title h2, .project_title h2 span{font-size:  clamp(90px, 2vw, 140px);}}
 
 
-}
-
+@media (max-width: 400px){
+.project_title{margin:30px 5px;}
+.project_list{ grid-template-columns:none}}
+@media (max-width: 350px){}
