@@ -19,7 +19,7 @@ margin-top: 120px; color: #fff;}
 /* ✅ 모바일에서도 자동으로 줄어드는 반응형 타이포 */
 main .inner h1{font-family:'Bayon', sans-serif; font-weight:200; line-height:0.85em; transition:700ms ease;
   z-index:999; font-size: clamp(150px, 15vw, 200px);margin-bottom: 10px;}
-main .inner p{font-weight:400; font-size: clamp(14px, 5vw, 20px);  line-height:1.3em; letter-spacing:0.05em; color: rgba(255,255,255,0.7);
+main .inner p{font-weight:400; font-size: clamp(16px, 5vw, 20px);  line-height:1.3em; letter-spacing:0.05em; color: rgba(255,255,255,0.7);
   max-width: 600px; margin:0 auto; word-break: keep-all; transition:700ms ease;}
   main .inner .mainhieen{display: none;}
 
@@ -30,10 +30,11 @@ main .inner p{font-weight:400; font-size: clamp(14px, 5vw, 20px);  line-height:1
 @media (max-width: 550px){
  main{margin-top: 150px;}
  main .inner h1{font-size: clamp(140px, 10vw, 180px); margin-bottom:10px;;}
- main .inner p{font-size: clamp(12px, 5vw, 14px); } }
+ main .inner p{font-size:18px} }
 @media (max-width: 500px){
   header{padding-top: 20px;}
   main{margin-top: 170px;}
   main .inner h1{font-size: clamp(100px, 5vw, 170px); margin-bottom:10px;}}
-@media (max-width: 480px){main{margin-top: 190px;}}
+@media (max-width: 480px){main{margin-top: 210px;}
+ main .inner p{font-size:16px} }
 @media (max-width: 380px){main .inner h1{font-size: clamp(90px, 5vw, 100px);margin-bottom:5px;} }
