@@ -5,7 +5,7 @@
 
 /*HOME*/
  #wrap{width: 100%; position: relative;overflow:hidden}
-.contInner{height:100%;width:100%;position:absolute} /*내용이 채워져서 높이가 잡히면 생략가능*/
+.contInner{height:100%;width:100%;position:absolute} 
 #content > section{margin:0 auto;overflow: hidden;}
 .inner{margin: 0 auto}
 /* style.css */ 
@@ -14,7 +14,6 @@
 :root{--bg: #000; --white: #fff; --navText: rgba(255,255,255, 0.8); --line: #fff;  /* 중앙선 색상 */ --fg: #fff;    /* 점(dot) 색상 */}
 *{ box-sizing:border-box; }
 html, body{ height:100%; }
-/* page wrapper */
 
 .page{ min-height:100vh; position:relative; background: var(--bg);}
 /* 스크롤 후: 배경/라인/블러 적용 */
@@ -24,8 +23,7 @@ header.is-scrolled{ background: rgba(241, 241, 241, 0.079); border-bottom-color:
 /* 타이틀 섹션 */
 .project_title { margin-bottom: 80px; }
 .project_title h2, .project_title h2 span  {transition: 500ms ease; font-size: clamp(160px, 15vw, 180px); font-weight: 200; color: #444;
-  text-transform: uppercase; font-family:"Bayon", sans-serif;
-line-height: 0.85em; letter-spacing: 0.05em;}
+  text-transform: uppercase; font-family:"Bayon", sans-serif;line-height: 0.85em; letter-spacing: 0.05em;}
 .project_title h2 span {display: block; color: #fff;}
 .tab_menu {display: flex; justify-content: flex-start; gap: 25px; margin-bottom: 50px; padding-bottom: 15px;position: relative; z-index: 10;}
 .tab_menu li a {font-size: 20px; font-weight: 400; color: #bbb; cursor: pointer; position: relative; transition: color 0.3s ease; letter-spacing: .1em; font-family: 'Pretendard', sans-serif;}
@@ -53,7 +51,6 @@ line-height: 0.85em; letter-spacing: 0.05em;}
   .project_title h2, .project_title h2 span{font-size:  clamp(100px, 5vw, 160px);}
   .container{padding: 50px 20px 100px;}
   .project_title{margin: 50px 20px 50px;;}
-  .project_title h2,.project_title h2 span{font-size: 120px; }
   .tab_menu li a {font-size: 16px; font-weight: 500;}
   .tab_menu{margin-bottom: 30px; padding-bottom: 0; gap: 10px;}
    .text_group h3{font-size: 18px; margin-bottom: 3px;}

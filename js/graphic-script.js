@@ -12,7 +12,7 @@ $(document).ready(function(){
 
   // [초기 실행]
   setBadges(); 
-  activateTab('main_visual');
+  activateTab('main');
 
   // ===========================
   // 2. 탭(Tab) 기능
@@ -28,7 +28,7 @@ $(document).ready(function(){
     $('.tab_menu li a[data-filter="' + filterName + '"]').addClass('on');
     $allArticles.hide(); 
 
-    if (filterName === 'main_visual') {
+    if (filterName === 'main') {
       $topArea.show(); $midHeader.show(); $('.badge').show(); 
       $('.main_top_item').appendTo($topArea).show();
       $('.main_list_item').appendTo($mainGrid).show();
