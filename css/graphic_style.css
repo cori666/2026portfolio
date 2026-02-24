@@ -185,6 +185,8 @@ body.popup-active #mainHeader {
 @media screen and (max-width: 900px) {
 .nav_prev { left: 0; background: rgba(0,0,0,0.5); }
 .nav_next { right: 0; background: rgba(0,0,0,0.5); }}
+@media (max-width: 768px) {
+  .waveContainer{height: 60px; min-height:60px;}}
 @media screen and (max-width: 770px){
 .container{padding: 50px 20px 80px;}
 .project_title{margin: 50px 20px 50px;;}

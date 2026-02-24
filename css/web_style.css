@@ -47,6 +47,8 @@ header.is-scrolled{ background: rgba(241, 241, 241, 0.079); border-bottom-color:
   0% { transform: translate3d(-90px,0,0); }
   100% { transform: translate3d(85px,0,0); }}
      /*-----------------------------web responsive----------------------------- */
+     @media (max-width: 768px) {
+  .waveContainer{height: 60px; min-height:60px;}}
 @media screen and (max-width: 770px){
   .project_title h2, .project_title h2 span{font-size:  clamp(100px, 5vw, 160px);}
   .container{padding: 50px 20px 100px;}
