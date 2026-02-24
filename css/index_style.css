@@ -11,7 +11,7 @@ body.no-y-scroll{ overflow: hidden; overscroll-behavior: none; height: 100dvh;}
 @supports not (height: 100dvh){body.no-y-scroll{ height: 100vh;}}
 #wrap{ width: 100%; position: relative; overflow:hidden;}
 .contInner{ width:100%; position:relative; min-height:100vh;}
-.page{ min-height:100vh; position:relative; background: radial-gradient(circle at center, #111 0%, #000 70%); overflow:hidden;  }
+.page{ min-height:100svh; position:relative; background: radial-gradient(circle at center, #111 0%, #000 70%); overflow:hidden;  }
 
 /* 중앙 타이틀 */
 main{ position:relative; z-index:10; display:grid; place-items:center;text-align:center; padding:0px 20px; transition:500ms ease;
@@ -27,6 +27,7 @@ main .inner p{font-weight:400; font-size: clamp(16px, 5vw, 20px);  line-height:1
 /*-----------------------------HOME responsive-- ------------}---------------*/
 @media (max-width: 700px){main .inner h1{font-size:clamp(150px, 2vw, 190px);}}
 @media (max-width: 600px){
+@media (max-width: 600px){.waveContainer{position: fixed; left: 0; right: 0; bottom: 0;}}
 main .inner{margin-top: 20px;}
 main .inner h1{margin-bottom:10px;}}
 @media (max-width: 550px){
