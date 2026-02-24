@@ -87,6 +87,7 @@ body.menu-open header { background-color: transparent; backdrop-filter: none; bo
 
 
 /*----------------------------- nav responsive /----------------------------- */
+@media (max-width: 768px) {.waveContainer{height: 60px; min-height:60px;}}
 @media (max-width: 700px) {
   .nav .menu {display: none;}
   .year .year-img {display: none;}
