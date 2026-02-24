@@ -27,7 +27,6 @@ main .inner p{font-weight:400; font-size: clamp(16px, 5vw, 20px);  line-height:1
 /*-----------------------------HOME responsive-- ------------}---------------*/
 @media (max-width: 700px){main .inner h1{font-size:clamp(150px, 2vw, 190px);}}
 @media (max-width: 600px){
-@media (max-width: 600px){.waveContainer{position: fixed; left: 0; right: 0; bottom: 0;}}
 main .inner{margin-top: 20px;}
 main .inner h1{margin-bottom:10px;}}
 @media (max-width: 550px){
