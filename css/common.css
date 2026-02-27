@@ -56,7 +56,7 @@ body.menu-open header { background-color: transparent; backdrop-filter: none; bo
   display: flex; flex-direction: column; justify-content: flex-start; padding-top: 80px; padding-left: 20px;}
 .mobile-nav-list {margin:0; display: flex; flex-direction: column; gap: 10px; align-items: flex-start;}
 .mobile-nav-list a {display: block; font-size: 24px; font-weight: 400; color:rgba(137, 137, 137, 0.9);
-  text-decoration: none; text-transform: lowercase; padding: 5px 0; opacity: 0; transform: translateY(20px);
+  padding: 5px 0; opacity: 0; transform: translateY(20px);   letter-spacing:.18em; text-decoration:none;
   transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);}
 .mobile-nav-list a:hover{color:rgb(255, 255, 255)}
 .mobile-overlay.active {opacity: 1; visibility: visible; pointer-events: auto;}

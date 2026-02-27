@@ -216,7 +216,6 @@ body.popup-active #mainHeader {
   .project_title h2, .project_title h2 span{font-size:  clamp(90px, 2vw, 140px);}}
   .top_visual_area .text_group .text_group01{font-size: clamp(14px, 2vw, 20px);margin-bottom: 5px;}
   .top_visual_area .text_group .text_group02{font-size: clamp(13px, 2vw, 16px);}
-  .tab_menu li a{font-size: clamp(14px, 2vw, 16px)}
 @media (max-width: 450px){
 .project_title{margin:30px 5px;}
 .grid_container.top_visual_area{display:flex; flex-direction: column;}
@@ -230,6 +229,4 @@ body.popup-active #mainHeader {
 .project_list .text_group p{font-size: 12px;}
 .top_visual_area .text_group h3{font-size: clamp(18px, 2vw, 22px);}
 .top_visual_area .text_group .text_group01{font-size: clamp(17px, 2vw, 20px);margin-bottom: 5px;}
-.top_visual_area .text_group .text_group02{font-size: clamp(15px, 2vw, 16px);}
-
-}
+.top_visual_area .text_group .text_group02{font-size: clamp(15px, 2vw, 16px);}}
