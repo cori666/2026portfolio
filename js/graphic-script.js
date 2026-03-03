@@ -78,7 +78,7 @@ $(document).ready(function(){
     $('#mCategoryTitle').text(category); 
     $('#mTools').text(tools);
     $('#mProject').text(title);
-    $('#mCategory').text(category + ' Design'); 
+    $('#mCategory').text(category + ''); 
     $('#mImage').attr('src', fullImg);
     
 
