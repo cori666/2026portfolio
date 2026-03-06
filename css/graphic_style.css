@@ -114,7 +114,7 @@ html, body{ height:100%; }
 #modalPopup {z-index: 999999999}
 .modal_overlay {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.676);z-index: 9999;
      overflow-y: auto; justify-content: center; align-items: flex-start; padding:20px 0;}
-.modal_container {width: 500px; height: auto;  max-height: none; display: flex; flex-direction: column; box-sizing: border-box; position: relative;
+.modal_container {width: 50%; height: auto;  max-height: none; display: flex; flex-direction: column; box-sizing: border-box; position: relative;
       margin:20px ; border:1.5px solid rgba(130, 130, 130, 0.225);transition: all 0.3s ease;     }
 .modal_header {display: flex; justify-content: space-between; padding: 10px 20px; position: relative; align-items: center; background: rgb(0, 0, 0); box-sizing: border-box; }
 
@@ -166,10 +166,10 @@ html, body{ height:100%; }
     overflow: visible; cursor: pointer; display: block; z-index: 10;
      width: 50px; height: 50px; border-radius: 50%;font-size: 24px;
     transition: background 0.5s ease, color 0.5s ease;
-    position: absolute; top: 55%; transform: translateY(-50%); transition: 500ms ease; opacity: 0.3;}
+    position: absolute; top: 55%; transform: translateY(-50%); transition: 500ms ease; opacity: 0.3;top:55%}
 .nav_btn:hover { opacity: 0.7;}
-.nav_prev {left:22%;} 
-.nav_next {right:23%;}
+.nav_prev {left:20%;} 
+.nav_next {right:20%;}
 .nav_prev, .nav_next{position: fixed; background:rgba(135, 135, 135, 0.205)}
 .nav_btn img{width: 50%;}
 body.popup-active #mainHeader {
@@ -192,7 +192,7 @@ body.popup-active #mainHeader {
 .modal_cat_title { font-size: 50px; line-height: 1.7;}
 .modal_info_group{gap: 1px;}
 .modal_info_group div{font-size: 12px;}
-.nav_btn { width: 40px; height: 40px; font-size: 18px; }
+.nav_btn { width: 40px; height: 40px; Top:50% }
 .waveContainer{height:60px;}
 #mainListGrid .project_item .thumb_box { height: 200px;}}  
 
