@@ -28,6 +28,14 @@ $(document).ready(function(){
     $('.tab_menu li a[data-filter="' + filterName + '"]').addClass('on');
     $allArticles.hide(); 
 
+    // 👇 [추가할 부분] 탭 종류에 따라 부모 그리드에 클래스 추가/제거
+    if (filterName === 'main') {
+      $('#mainListGrid').removeClass('grid-2col').addClass('grid-3col');
+    } else {
+      $('#mainListGrid').removeClass('grid-3col').addClass('grid-2col');
+    }
+    // 👆 여기까지
+
     if (filterName === 'main') {
       $topArea.show(); $midHeader.show(); $('.badge').show(); 
       $('.main_top_item').appendTo($topArea).show();
@@ -80,6 +88,8 @@ $(document).ready(function(){
     $('#mProject').text(title);
     $('#mCategory').text(category + ''); 
     $('#mImage').attr('src', fullImg);
+    //새로 팝업이 열릴 때 무조건 스크롤을 맨 위(0)로 리셋
+    $('#modalPopup').scrollTop(0);
     
 
     // 1. 팝업 띄우기
@@ -125,3 +135,22 @@ $(document).ready(function(){
   openModal(nextItem);
 }
 });
+
+// ===========================
+  // 5. 팝업창 Top 버튼 기능
+  // ===========================
+  
+  // (1) 팝업창 안에서 스크롤을 내릴 때만 버튼 나타나게 하기
+  $('#modalPopup').on('scroll', function() {
+    if ($(this).scrollTop() > 300) { // 위에서 300px 이상 내려오면
+      $('#modalTopBtn').fadeIn(300); // 부드럽게 나타남
+    } else {
+      $('#modalTopBtn').fadeOut(300); // 다시 올라가면 숨김
+    }
+  });
+
+  // (2) 버튼 클릭 시 맨 위로 스무스하게 올라가기
+  $('#modalTopBtn').on('click', function(e) {
+    e.stopPropagation(); // 중요: 이 버튼을 눌렀을 때 팝업창이 닫히는 것(오버레이 클릭 이벤트)을 방지
+    $('#modalPopup').stop().animate({ scrollTop: 0 }, 400); // 0.4초 동안 맨 위로 이동
+  });

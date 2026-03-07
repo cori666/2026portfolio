@@ -1,4 +1,4 @@
-40px@charset "utf-8";
+@charset "utf-8";
 
 /*font-family:'Pretendard', sans-serif;*/
 /*font-family:'Bayon', sans-serif;*/
@@ -48,9 +48,9 @@ header.is-scrolled{ background: rgba(241, 241, 241, 0.079); border-bottom-color:
   100% { transform: translate3d(85px,0,0); }}
      /*-----------------------------web responsive----------------------------- */
 @media screen and (max-width: 770px){
-  .project_title h2, .project_title h2 span{font-size:  clamp(100px, 5vw, 160px);}
+.project_title{margin: 50px 20px 50px;;}
+.project_title h2, .project_title h2 span{font-size:  clamp(100px, 5vw, 160px);}
   .container{padding: 50px 20px 100px;}
-  .project_title{margin: 50px 20px 50px;;}
   .tab_menu li a {font-size: 16px; font-weight: 500;}
   .tab_menu{margin-bottom: 30px; padding-bottom: 0; gap: 10px;}
   .text_group h3{font-size: clamp(20px, 2vw, 22px); margin-bottom: 3px;}
@@ -63,6 +63,6 @@ header.is-scrolled{ background: rgba(241, 241, 241, 0.079); border-bottom-color:
 @media (max-width: 600px){.view_btn{font-size: 10px; padding:5px;}}
 @media (max-width: 500px){
 .project_title{margin:30px 5px;}
-.project_list{ grid-template-columns:none}}
+.project_list{ grid-template-columns:none}
 .project_title{margin: 30px 15px;}
-.project_title h2, .project_title h2 span{font-size:  clamp(90px, 2vw, 140px);}
+.project_title h2, .project_title h2 span{font-size:  clamp(90px, 2vw, 140px);}}
