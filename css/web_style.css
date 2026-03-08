@@ -62,6 +62,7 @@ header.is-scrolled{ background: rgba(241, 241, 241, 0.079); border-bottom-color:
 .waveContainer{height: 60px; min-height:60px;}}
 @media (max-width: 600px){.view_btn{font-size: 10px; padding:5px;}}
 @media (max-width: 500px){
+.skill-icon h3{padding: 0;}
 .project_title{margin:30px 5px;}
 .project_list{ grid-template-columns:none}
 .project_title{margin: 30px 15px;}
