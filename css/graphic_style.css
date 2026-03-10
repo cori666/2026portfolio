@@ -62,7 +62,7 @@ html, body{ height:100%; }
 #mainListGrid.grid-2col { grid-template-columns: repeat(2, 1fr);}
 #mainListGrid.grid-3col .project_item .thumb_box {height: 200px;} 
 #mainListGrid.grid-2col .project_item .thumb_box {height: 200px;}
-
+.badge {text-transform: uppercase; letter-spacing: 0.6px;}
 
 /* ========================================= pop-up스타일 ========================================= */
 #modalPopup {z-index: 999999999}
@@ -70,25 +70,15 @@ html, body{ height:100%; }
      overflow-y: auto; justify-content: center; align-items: flex-start; padding:20px 0;}
 .modal_container {width:900px; height: auto;  max-height: none; display: flex; flex-direction: column; box-sizing: border-box; position: relative;
       margin:20px ; border:1.5px solid rgba(130, 130, 130, 0.225);transition: all 0.3s ease;     }
-.modal_header {display: flex; justify-content: space-between; padding: 10px 20px; position: relative; align-items: center; background: rgb(0, 0, 0); box-sizing: border-box; }
-
-    /* Left Side: Big Category Title */
+.modal_header {display: flex; justify-content: space-between; padding: 5px 20px; position: relative; align-items: center; background: rgb(0, 0, 0); box-sizing: border-box; }
+/* Left Side: Big Category Title */
 .modal_title_group { flex: 1; }
-.modal_cat_title {font-family: "Bayon", sans-serif; font-weight: 400;
-      font-size: 50px; color: #fff;
-      line-height: 1.5;
-      text-transform: uppercase; margin: 0;}
-
+.modal_cat_title {font-family: "Bayon", sans-serif; font-weight: 400; font-size:clamp(50px, 2vw, 70px); color: #fff; letter-spacing: 3px; text-transform: uppercase; margin: 0;}
 /* Right Side: Details */
-.modal_info_group {
-      display: flex; flex-direction: column;
-       gap: 3px; text-align: left; }
-.info_row { display: grid; grid-template-columns:
-      60px 1fr; font-size: 12px;}
+.modal_info_group {display: flex; flex-direction: column; gap: 3px; text-align: left; }
+.info_row { display: grid; grid-template-columns: 80px 1fr; font-size: 16px;}
 .info_label { color: #888; font-weight: 300; }
-.info_val { color: #fff; font-weight: 300;
-      text-transform: uppercase;}
-
+.info_val { color: #fff; font-weight: 300;}
 /* pop-up Close Button */
 .modal_close_btn {
       position: absolute; top: -30px; right: 0;
@@ -98,26 +88,11 @@ html, body{ height:100%; }
       background: transparent; /* 배경 제거 */
       cursor: pointer;    }
 .modal_close_btn:hover{color: #fff;}
-
-.modal_content_area {
-      flex: 1; 
-      display: flex; align-items: center;
-      justify-content: center;
-      position: relative; 
-      width: 100%; }
-
-.modal_img_box {
-      width: 100%;
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-
-
+.modal_content_area {flex: 1; display: flex; align-items: center; justify-content: center;
+      position: relative; width: 100%; }
+.modal_img_box {width: 100%; height: auto; display: flex; flex-direction: column; align-items: center; }
 .modal_img_box img {width: 100%; height: auto; max-width: 100%; max-height: none; object-fit: contain; display: block; margin: auto 0;}
- /* Navigation Buttons (Arrows) */
-.nav_btn {
-    overflow: visible; cursor: pointer; display: block; z-index: 10;
+.nav_btn {overflow: visible; cursor: pointer; display: block; z-index: 10;
      width: 50px; height: 50px; border-radius: 50%;font-size: 24px;
     transition: background 0.5s ease, color 0.5s ease;
     position: absolute; top: 55%; transform: translateY(-50%); transition: 500ms ease; opacity: 0.3;top:55%}
@@ -126,14 +101,9 @@ html, body{ height:100%; }
 .nav_next {right:10%;}
 .nav_prev, .nav_next{position: fixed; background:rgba(135, 135, 135, 0.205)}
 .nav_btn img{width: 50%;}
-body.popup-active #mainHeader {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-    transition: none !important; /* 깜빡임 방지 */}
+body.popup-active #mainHeader {opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; transition: none !important;/}
 /*-----------------------------graphic responsive----------------------------- */
 @media screen and (max-width: 1200px) {.modal_container{width:800px} .nav_prev{left:8%;} .nav_next {right:8%;}}
-@media screen and (max-width: 1000px) {}
 @media screen and (max-width: 900px) {.modal_container{width:700px} .nav_prev {left:7%;} .nav_next {right:7%;}}
 @media screen and (max-width: 770px){
 .modal_container{width:600px}
@@ -142,36 +112,37 @@ body.popup-active #mainHeader {
 .project_title h2, .project_title h2 span{font-size:  clamp(100px, 5vw, 160px);}
 .tab_menu li a {font-size: 16px; font-weight: 500;}
 .tab_menu{margin-bottom: 30px; padding-bottom: 0; gap: 10px;}
-.modal_header { gap: 20px;}
-.modal_cat_title { font-size: 50px; letter-spacing: 3px;}
 .modal_info_group{gap: 1px;}
-.modal_info_group div{font-size: 12px;}
+.modal_info_group div{font-size: clamp(12px, 2vw, 16px)}
 .nav_btn { width: 40px; height: 40px; Top:50% }
 .waveContainer{height:60px;}
 #mainListGrid.grid-3col .project_item .thumb_box { height: 200px;}}  
+
 @media screen and (max-width: 600px){
 .modal_container{width:500px}
 .modal_header { gap: 20px;}
-.info_row{gap: 0; grid-template-columns:50px 1fr;}
-.modal_cat_title { font-size: 40px; line-height: 1.7;}
+.info_row{gap: 0; grid-template-columns:65px 1fr;}
 .modal_info_group{gap: 1px;}
-.modal_info_group div{font-size: 10px;}
 .nav_btn { width: 40px; height: 40px;}
 #mainListGrid.grid-3col .project_item .thumb_box{height: 150px;}
 .grid_container{margin-bottom:0px; gap:15px;}
 .project_list .text_group h3{font-size:clamp(14px, 2vw, 18px); margin-bottom:0}
 .project_list .text_group p{font-size:clamp(10px, 2vw, 14px);}
 #mainListGrid .project_item .badge{font-size: 10px; top:5px; left: 5px; font-weight: 500;}}
+
 @media (max-width: 500px){
 .modal_container {width: 500px;}
 .nav_btn { Top:35%; width:30px; height: 30px;}
 .nav_prev, .nav_next{position: fixed; background:rgba(78, 78, 78, 0.636)}
 .nav_prev{left: 25px;}
 .nav_next{right:25px}
+.info_row{gap: 0; grid-template-columns:60px 1fr;}
+.modal_header{padding: 5px 10px;}
 .project_title{margin: 30px 15px;}
 .project_title h2, .project_title h2 span{font-size:  clamp(90px, 2vw, 140px);}}
 .top_visual_area .text_group .text_group01{font-size: clamp(14px, 2vw, 20px);margin-bottom: 5px;}
 .top_visual_area .text_group .text_group02{font-size: clamp(13px, 2vw, 16px);}
+
 @media (max-width: 450px){
 .modal_container {width: 400px;}
 .project_title{margin:30px 5px;}
@@ -181,6 +152,7 @@ body.popup-active #mainHeader {
 .section_heading h3{font-size:26px; font-weight:600}
 .grid_container{margin-bottom:0px; gap: 10px;}
 .section_heading{margin:20px 0;}
+.modal_cat_title{font-size:clamp(40px, 2vw, 50px);}
 #mainListGrid.grid-3col .project_item .thumb_box{ height: 100px;}
 #mainListGrid.grid-2col .project_item .thumb_box{ height: 100px;}
 .project_list .text_group h3{font-size: 16px;margin-bottom:3px}
