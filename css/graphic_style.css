@@ -99,7 +99,7 @@ html, body{ height:100%; }
 .nav_btn:hover { opacity: 0.7;}
 .nav_prev {left:10%;} 
 .nav_next {right:10%;}
-.nav_prev, .nav_next{position: fixed; background:rgba(135, 135, 135, 0.205)}
+.nav_prev, .nav_next{position: fixed; background:rgba(64, 64, 64, 0.848)}
 .nav_btn img{width: 50%;}
 body.popup-active #mainHeader {opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; transition: none !important;/}
 /*-----------------------------graphic responsive----------------------------- */
