@@ -156,7 +156,7 @@ body.popup-active #mainHeader {opacity: 0 !important; visibility: hidden !import
 .section_heading h3{font-size:26px; font-weight:600}
 .grid_container{margin-bottom:0px; gap: 10px;}
 .section_heading{margin:20px 0;}
-.modal_cat_title{font-size:clamp(40px, 2vw, 50px);}
+.modal_cat_title{font-size:clamp(35px, 2vw, 50px); letter-spacing: 1px;}
 #mainListGrid.grid-3col .project_item .thumb_box{ height: 100px;}
 #mainListGrid.grid-2col .project_item .thumb_box{ height: 100px;}
 .top_visual_area .text_group h3{font-size: clamp(18px, 2vw, 22px);}
