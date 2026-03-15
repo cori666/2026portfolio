@@ -39,8 +39,8 @@ html, body{ height:100%; }
 .project_item {width: 100%; display: none; cursor: pointer; background-color: #21212166;border-radius: 10px;} 
 .thumb_box {width: 100%;overflow: hidden; background: #1a1a1a;  position: relative; transition: 500ms ease;}
 .project_item:hover .thumb_box img { transform: scale(1.05); }
- .badge {position: absolute; top: 10px; left: 10px; background: rgba(255, 200, 150, 0.9); color: #ffffff; font-size: 12px;
-      font-weight: 400; padding: 4px 10px; border-radius: 20px; z-index: 5; display: none;}
+ .badge {position: absolute; top: 10px; left: 10px; background: rgba(255, 200, 150, 0.9); color: #ffffff; font-size: 16px;
+      font-weight: 800; padding: 4px 10px; border-radius: 20px; z-index: 5; display: none;}
 .top_visual_area .thumb_box { aspect-ratio: 16 / 10; }
 .project_list .thumb_box { aspect-ratio: 16 / 11; }
 .project_list.layout-3col .project_item.square .thumb_box {aspect-ratio: 1 / 1; }
